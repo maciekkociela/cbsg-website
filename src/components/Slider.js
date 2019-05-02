@@ -18,12 +18,14 @@ const Slider = (props) => {
         {props.slides.map( (slide) =>
                 <div className={styles.eachFade}>
                     <BackgroundImage Tag="section"
-                           fluid={slide.node.featured_media.localFile.childImageSharp.fixed}
+                           fluid={slide.node.featured_media.localFile.childImageSharp.fluid}
                            backgroundColor={`#040e18`}
                     >   
                         <div className={styles.slide}>
-                            <h1><StringToHtml html={slide.node.title} /></h1>
-                            <button><StringToHtml html={slide.node.acf.button} /></button>
+                            <div className={styles.slideContent}>
+                                <h1><StringToHtml html={slide.node.title} /></h1>
+                                <button><StringToHtml html={slide.node.acf.button} /></button>
+                            </div>
                         </div>
                     </BackgroundImage>
                   

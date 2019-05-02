@@ -52,7 +52,7 @@ class IndexPage extends Component {
                       localFile {
                         childImageSharp {
                           fluid(quality: 90, maxWidth: 4160) {
-                          	srcWebp
+                          	src
                           }
                           fixed(width: 125, height: 125) {
                             srcWebp
