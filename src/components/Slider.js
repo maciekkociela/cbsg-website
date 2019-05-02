@@ -23,6 +23,7 @@ const Slider = (props) => {
                     >   
                         <div className={styles.slide}>
                             <h1><StringToHtml html={slide.node.title} /></h1>
+                            <button><StringToHtml html={slide.node.acf.button} /></button>
                         </div>
                     </BackgroundImage>
                   
