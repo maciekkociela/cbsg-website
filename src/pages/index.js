@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 
-import Image from 'gatsby-image'
 
 
 import Layout from '../components/layout'
@@ -52,10 +51,16 @@ class IndexPage extends Component {
                       localFile {
                         childImageSharp {
                           fluid(quality: 90, maxWidth: 4160) {
-                          	src
+                          	srcSet
+                            aspectRatio
+                            src
+                            sizes
                           }
                           fixed(width: 125, height: 125) {
-                            srcWebp
+                            srcSet
+                            src
+                            width
+                            height
                           }
                         }
                       }
@@ -75,15 +80,10 @@ class IndexPage extends Component {
               
               <Slider slides={data.allWordpressWpSlider.edges} />
 
-              {data.allWordpressWpSlider.edges.map( (edge) =>
-                  <div>
-                  <h2><StringToHtml html={edge.node.title} /></h2>
-                  <Image fixed={edge.node.featured_media.localFile.childImageSharp.fixed} />
-                  </div>
-              )}
+              
 
               {data.allWordpressWpNews.edges.map( (edge) =>
-                <Link to={"/" + edge.node.slug}>
+                <Link key={edge.id} to={"/" + edge.node.slug}>
                   <h2><StringToHtml html={edge.node.title} /></h2>
                 </Link>
               )}

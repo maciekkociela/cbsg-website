@@ -1,7 +1,10 @@
 import React from 'react'
 import { Fade } from 'react-slideshow-image';
-import StringToHtml from '../components/StringToHtml'
 import BackgroundImage from 'gatsby-background-image'
+
+import Container from '../layouts/container'
+
+import StringToHtml from '../components/StringToHtml'
 
 import styles from './Slider.module.scss'
   
@@ -16,16 +19,16 @@ const Slider = (props) => {
     return (
       <Fade {...fadeProperties}>
         {props.slides.map( (slide) =>
-                <div className={styles.eachFade}>
+                <div key={slide.toString()} className={styles.eachFade}>
                     <BackgroundImage Tag="section"
                            fluid={slide.node.featured_media.localFile.childImageSharp.fluid}
                            backgroundColor={`#040e18`}
                     >   
                         <div className={styles.slide}>
-                            <div className={styles.slideContent}>
+                            <Container>
                                 <h1><StringToHtml html={slide.node.title} /></h1>
                                 <button><StringToHtml html={slide.node.acf.button} /></button>
-                            </div>
+                            </Container>
                         </div>
                     </BackgroundImage>
                   
