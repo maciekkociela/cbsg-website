@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import Layout from '../components/layout'
 import StringToHtml from '../components/StringToHtml'
@@ -84,7 +84,13 @@ class IndexPage extends Component {
 
               {data.allWordpressWpNews.edges.map( (edge) =>
                 <Link key={edge.id} to={"/" + edge.node.slug}>
+                <div style={{height: 200}}></div>
+
+                  <ScrollAnimation animateIn="slideInUp" >
+                  
                   <h2><StringToHtml html={edge.node.title} /></h2>
+                  
+                  </ScrollAnimation>
                 </Link>
               )}
 
