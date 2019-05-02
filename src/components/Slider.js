@@ -17,11 +17,8 @@ const Slider = (props) => {
       <Fade {...fadeProperties}>
         {props.slides.map( (slide) =>
                 <div className={styles.eachFade}>
-                  
-                  
                     <BackgroundImage Tag="section"
-                           className="className"
-                           fluid={slide.node.featured_media.localFile.childImageSharp.sizes}
+                           fluid={slide.node.featured_media.localFile.childImageSharp.fixed}
                            backgroundColor={`#040e18`}
                     >   
                         <div className={styles.slide}>

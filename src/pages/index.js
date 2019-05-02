@@ -6,7 +6,7 @@ import Image from 'gatsby-image'
 
 import Layout from '../components/layout'
 import StringToHtml from '../components/StringToHtml'
-
+import Slider from '../components/Slider'
 
 class IndexPage extends Component {
   render () {
@@ -51,13 +51,11 @@ class IndexPage extends Component {
                     featured_media {
                       localFile {
                         childImageSharp {
-                          resolutions(width: 1000) {
-                            src
-                            width
-                            height
+                          fluid(quality: 90, maxWidth: 4160) {
+                          	srcWebp
                           }
                           fixed(width: 125, height: 125) {
-                            ...GatsbyImageSharpFixed
+                            srcWebp
                           }
                         }
                       }
@@ -75,6 +73,7 @@ class IndexPage extends Component {
           render={data => ( 
             <div className="index-page">
               
+              <Slider slides={data.allWordpressWpSlider.edges} />
 
               {data.allWordpressWpSlider.edges.map( (edge) =>
                   <div>
