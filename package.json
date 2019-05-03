@@ -24,6 +24,7 @@
     "react": "^16.8.6",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.6",
+    "react-flexbox-grid": "^2.1.2",
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
     "react-slideshow-image": "^1.1.5",
