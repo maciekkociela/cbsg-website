@@ -5,10 +5,12 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "animate.css": "^3.7.0",
     "gatsby": "^2.3.34",
     "gatsby-background-image": "^0.5.0",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-nprogress": "^2.0.10",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
@@ -17,11 +19,16 @@
     "gatsby-source-wordpress": "^3.0.58",
     "gatsby-transformer-sharp": "^2.1.18",
     "html-react-parser": "^0.7.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.6",
+    "react-flexbox-grid": "^2.1.2",
+    "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
-    "react-slideshow-image": "^1.1.5"
+    "react-slideshow-image": "^1.1.5",
+    "typescript": "^3.4.5"
   },
   "devDependencies": {
     "prettier": "^1.17.0"

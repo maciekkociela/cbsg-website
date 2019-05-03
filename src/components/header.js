@@ -2,21 +2,15 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Headroom from "react-headroom"
+import Container from "../layouts/container"
+
+import styles from "./header.module.scss"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <Headroom style={{zIndex:2}}>
+    <header className={styles.header}>
+      <Container>
         <Link
           to="/"
           style={{
@@ -26,9 +20,9 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
-    </div>
-  </header>
+      </Container>
+    </header>
+  </Headroom>
 )
 
 Header.propTypes = {
